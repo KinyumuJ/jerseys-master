@@ -41,7 +41,7 @@ const Signup = () => {
     formdata.append('phone', phone)
 
     try {
-      const response = await axios.post('http://janembuni.alwaysdata.net/api/signup', formdata)
+      const response = await axios.post('https://janembuni.alwaysdata.net/api/signup', formdata)
       setSuccess(response.data.message)
       setLoading('')
       // Reset form on success

@@ -33,7 +33,7 @@ const Signin = () => {
     formdata.append('password', password)
 
     try {
-      const response = await axios.post('http://janembuni.alwaysdata.net/api/signin', formdata)
+      const response = await axios.post('https://janembuni.alwaysdata.net/api/signin', formdata)
       setSuccess(response.data.message)
       setLoading('')
       // Reset form on success

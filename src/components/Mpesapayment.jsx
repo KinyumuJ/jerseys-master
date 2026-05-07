@@ -11,7 +11,7 @@ const Mpesapayment = () => {
   const [error, setError] = useState('')
   const [phoneError, setPhoneError] = useState('')
 
-  const imagePath = 'http://janembuni.alwaysdata.net/static/images/'
+  const imagePath = 'https://janembuni.alwaysdata.net/static/images/'
   const isCartCheckout = cart.length > 0
   const paymentItems = isCartCheckout ? cart : singleproduct ? [singleproduct] : []
 
@@ -49,7 +49,7 @@ const Mpesapayment = () => {
 
     try {
       const res = await axios.post(
-        'http://janembuni.alwaysdata.net/api/mpesa_payment',
+        'https://janembuni.alwaysdata.net/api/mpesa_payment',
         formdata
       )
       setSuccess(res.data.message)

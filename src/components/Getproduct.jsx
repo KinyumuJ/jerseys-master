@@ -13,7 +13,7 @@ const Getproduct = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
     setLoading(true)
     setError('')
     try {
-      const response = await fetch('http://janembuni.alwaysdata.net/api/getproducts')
+      const response = await fetch('https://janembuni.alwaysdata.net/api/getproducts')
       if (!response.ok) {
         throw new Error(`Failed to load products: ${response.status}`)
       }
@@ -30,7 +30,7 @@ const Getproduct = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
     getproducts()
   }, [])
 
-  const imagepath = 'http://janembuni.alwaysdata.net/static/images/'
+  const imagepath = 'https://janembuni.alwaysdata.net/static/images/'
 
   const handleCheckout = () => {
     if (!cartItems.length) return
